@@ -15,23 +15,81 @@
       --navy: #002147;
       --gold: #D4AF37;
     }
-    .sub-header { background: linear-gradient(90deg, var(--navy), #1b263b); }
-    .main-button-red, .button-red { background: var(--gold) !important; color: var(--navy) !important; font-weight: 600; }
-    .main-button-red:hover { background: #b8972e !important; }
-    .golden-header { color: var(--gold) !important; font-weight: 700; }
-    .hero { 
-      background: linear-gradient(rgba(0,33,71,0.85), rgba(0,33,71,0.85)), 
-                  url('https://images.unsplash.com/photo-1581093450021-4b5d0d2d0a2d') center/cover no-repeat; 
-      height: 620px; 
+    .sub-header {
+      background: linear-gradient(90deg, var(--navy), #1b263b);
     }
-    .card { transition: all 0.4s; }
-    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(212,175,55,0.2); }
-    .border-gold { border: 2px solid var(--gold); }
+    .main-button-red, .button-red {
+      background: var(--gold) !important;
+      color: var(--navy) !important;
+      font-weight: 600;
+    }
+    .main-button-red:hover {
+      background: #b8972e !important;
+    }
+    .golden-header {
+      color: var(--gold) !important;
+      font-weight: 700;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,33,71,0.85), rgba(0,33,71,0.85)), 
+                  url('https://images.unsplash.com/photo-1581093450021-4b5d0d2d0a2d') center/cover no-repeat;
+      height: 620px;
+      display: flex;
+      align-items: center;
+    }
+    .card {
+      transition: all 0.4s ease;
+      border: 2px solid var(--gold);
+    }
+    .card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
+    }
+ /* Sub Header Fix */
+    .sub-header {
+      background: linear-gradient(90deg, var(--navy), #1b263b);
+      padding: 7px 0;
+    }
+    .top-header {
+      color: #fff;
+      font-size: 14px;
+    }
+    .contact-info span {
+      margin-right: 20px;
+      font-weight: 500;
+    }
+    .contact-info i {
+      color: var(--gold);
+      margin-right: 8px;
+    }
+
+    /* Ticker Fix */
+    .news-ticker {
+      overflow: hidden;
+      position: relative;
+    }
+    .ticker-track {
+      display: inline-flex;
+      white-space: nowrap;
+      animation: tickerMove 25s linear infinite;
+    }
+    .ticker-track span {
+      margin-right: 80px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .news-ticker:hover .ticker-track {
+      animation-play-state: paused;
+    }
+    @keyframes tickerMove {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Sub Header -->
+  <!-- Sub Header (Fixed & Visible) -->
   <div class="sub-header">
     <div class="top-header">
       <div class="container">
@@ -43,7 +101,8 @@
           <div class="col-lg-6 ticker-area">
             <div class="news-ticker">
               <div class="ticker-track">
-                <span>Empowering Odisha's Education | Enrollments Open for Pragyan-Leader After-School Program | 📢 AI, ML & Data Science Classes Starting Soon | 📢 Personality Development Classes Starting Soon</span>
+                <span>Empowering Odisha's Education | Enrollments Open for Pragyan-Leader After-School Program | 📢 Classes on AI, ML & Data Science to start soon | 📢 Practical Classes on Personality Development to start soon</span>
+                <span>Empowering Odisha's Education | Enrollments Open for Pragyan-Leader After-School Program | 📢 Classes on AI, ML & Data Science to start soon | 📢 Practical Classes on Personality Development to start soon</span>
               </div>
             </div>
           </div>
@@ -89,11 +148,18 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="video-overlay header-text text-center">
-      <h1 class="text-white fw-bolder display-3">PragyanVidhya</h1>
-      <p class="text-white lead mt-4">Like the ancient Gurukul system that sharpened young minds for centuries,<br>we now empower students with modern AI, Machine Learning and Data Science — all in their mother tongue Odia.</p>
-      <div class="main-button-red mt-4">
-        <a href="#contact">Join PragyanVidhya Program</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="text-white fw-bolder display-3 mb-3">PragyanVidhya</h1>
+          <p class="text-white lead" style="max-width:900px; margin:auto;">
+            Like the ancient Gurukul system that sharpened young minds for centuries,<br>
+            we now empower students with modern AI, Machine Learning and Data Science — all in their mother tongue Odia.
+          </p>
+          <div class="main-button-red mt-5 d-inline-block">
+            <a href="#contact">Join PragyanVidhya Program</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -105,31 +171,31 @@
       </div>
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="card h-100 text-center p-4 border-gold">
-            <h4 class="golden-header">AI & Machine Learning</h4>
+          <div class="card h-100 p-5 text-center">
+            <h4 class="golden-header mb-3">AI & Machine Learning</h4>
             <p>Modern technology that teaches logical thinking and problem-solving, just like our ancient scholars solved complex problems.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card h-100 text-center p-4 border-gold">
-            <h4 class="golden-header">Data Science & Analytics</h4>
+          <div class="card h-100 p-5 text-center">
+            <h4 class="golden-header mb-3">Data Science & Analytics</h4>
             <p>Turning raw data into meaningful insights — blending traditional wisdom with future-ready analytical skills.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card h-100 text-center p-4 border-gold">
-            <h4 class="golden-header">Innovative Vernacular Learning</h4>
+          <div class="card h-100 p-5 text-center">
+            <h4 class="golden-header mb-3">Innovative Vernacular Learning</h4>
             <p>100% Odia medium teaching so every child, from remote villages to cities, gets equal opportunity to excel.</p>
           </div>
         </div>
       </div>
       <div class="text-center mt-5">
-        <a href="#contact" class="main-button-red btn btn-lg px-5">Enroll Now – Shape the Future</a>
+        <a href="#contact" class="main-button-red btn btn-lg px-5 py-3">Enroll Now – Shape the Future</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact & Footer (same as your homepage) -->
+  <!-- Contact & Footer -->
   <section class="contact-us" id="contact">
     <div class="container">
       <div class="row">
@@ -137,7 +203,6 @@
           <form id="contact" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <h2>Partner With Us</h2>
             <p style="color:#D4AF37;">Join hands to bring data-driven, AI-powered education to every child in Odisha.</p>
-            <!-- Form fields same as your homepage -->
             <div class="row">
               <div class="col-lg-4"><input name="name" type="text" placeholder="YOUR NAME..." required class="form-control mb-3"></div>
               <div class="col-lg-4"><input name="email" type="email" placeholder="YOUR EMAIL..." required class="form-control mb-3"></div>
@@ -150,8 +215,8 @@
         <div class="col-lg-3">
           <div class="right-info">
             <ul>
-              <li><h6>Phone</h6><span>+91 98765 43210</span></li>
-              <li><h6>Email</h6><span>admin@vidhyasetuedwell.in</span></li>
+              <li><h6>Phone Number</h6><span>+91 98765 43210</span></li>
+              <li><h6>Email Address</h6><span>admin@vidhyasetuedwell.in</span></li>
               <li><h6>Office</h6><span>Bhubaneswar, Odisha</span></li>
             </ul>
           </div>

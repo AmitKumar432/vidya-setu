@@ -881,19 +881,21 @@ services
 }
 
 .services .item {
-  background-image: url(../images/service-item-bg.jpg);
+  background-image: url(../images/service-item-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   border-radius: 20px;
   text-align: center;
   color: #fff;
-  padding: 40px;
+  padding: 20px 30px;
 }
 
 .services .item .icon {
   max-width: 60px;
   margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(10, 31, 56, 0.9);
 }
 
 .services .item h4 {
@@ -901,11 +903,13 @@ services
   margin-bottom: 15px;
   font-size: 18px;
   font-weight: 600;
+  background: rgba(10, 31, 56, 0.7);
 }
 
 .services .item p {
   color: #fff;
   font-size: 13px;
+  background: rgba(10, 31, 56, 0.7);
 }
 
 .services .owl-nav {
@@ -1417,7 +1421,8 @@ section.our-facts h2 {
 section.our-facts .video {
   text-align: center;
   margin-left: 70px;
-  background-image: url(../images/logo/logo.jpeg);
+  background: #0a1f38;
+  /* background-image: url(../images/logo/logo.jpeg); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

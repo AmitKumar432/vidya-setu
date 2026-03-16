@@ -11,45 +11,51 @@
   <link rel="stylesheet" href="assets/css/owl.css">
 
   <style>
-    :root {
-      --navy: #002147;
-      --gold: #D4AF37;
+    :root { --navy: #002147; --gold: #D4AF37; }
+    .sub-header { background: linear-gradient(90deg, var(--navy), #1b263b); }
+    .main-button-red, .button-red { background: var(--gold) !important; color: var(--navy) !important; font-weight: 600; }
+    .main-button-red:hover { background: #b8972e !important; }
+    .golden-header { color: var(--gold) !important; font-weight: 700; }
+    .hero { 
+      background: linear-gradient(rgba(0,33,71,0.85), rgba(0,33,71,0.85)), 
+                  url('https://images.unsplash.com/photo-1599901860904-17e6ed7083a0') center/cover no-repeat; 
+      height: 620px; 
+      display: flex; align-items: center;
     }
+    .card { transition: all 0.4s ease; border: 2px solid var(--gold); }
+    .card:hover { transform: translateY(-12px); box-shadow: 0 15px 35px rgba(212,175,55,0.25); }
+ /* Sub Header Fix */
     .sub-header {
       background: linear-gradient(90deg, var(--navy), #1b263b);
+      padding: 7px 0;
     }
-    .main-button-red, .button-red {
-      background: var(--gold) !important;
-      color: var(--navy) !important;
-      font-weight: 600;
+    .top-header {
+      color: #fff;
+      font-size: 14px;
     }
-    .main-button-red:hover {
-      background: #b8972e !important;
+    .contact-info span {
+      margin-right: 20px;
+      font-weight: 500;
     }
-    .golden-header {
-      color: var(--gold) !important;
-      font-weight: 700;
+    .contact-info i {
+      color: var(--gold);
+      margin-right: 8px;
     }
-    .hero {
-      background: linear-gradient(rgba(0,33,71,0.85), rgba(0,33,71,0.85)), 
-                  url('https://images.unsplash.com/photo-1599901860904-17e6ed7083a0') center/cover no-repeat;
-      height: 620px;
-      display: flex;
-      align-items: center;
+    /* Ticker Fix */
+    .news-ticker { overflow: hidden; position: relative; }
+    .ticker-track { 
+      display: inline-flex; 
+      white-space: nowrap; 
+      animation: tickerMove 25s linear infinite; 
     }
-    .card {
-      transition: all 0.4s ease;
-      border: 2px solid var(--gold);
-    }
-    .card:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
-    }
+    .ticker-track span { margin-right: 80px; font-weight: 600; color: #fff; }
+    .news-ticker:hover .ticker-track { animation-play-state: paused; }
+    @keyframes tickerMove { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
   </style>
 </head>
 <body>
 
-  <!-- Sub Header -->
+  <!-- Sub Header (Fixed) -->
   <div class="sub-header">
     <div class="top-header">
       <div class="container">
@@ -61,7 +67,8 @@
           <div class="col-lg-6 ticker-area">
             <div class="news-ticker">
               <div class="ticker-track">
-                <span>Empowering Odisha's Education | Enrollments Open for Pragyan-Leader After-School Program | 📢 AI, ML & Data Science Classes Starting Soon | 📢 Personality Development Classes Starting Soon</span>
+                <span>Empowering Odisha's Education | Enrollments Open for Pragyan-Leader After-School Program | 📢 Classes on AI, ML & Data Science to start soon | 📢 Practical Classes on Personality Development to start soon</span>
+                <span>Empowering Odisha's Education | Enrollments Open for Pragyan-Leader After-School Program | 📢 Classes on AI, ML & Data Science to start soon | 📢 Practical Classes on Personality Development to start soon</span>
               </div>
             </div>
           </div>
@@ -105,7 +112,7 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
       <div class="row">
@@ -123,42 +130,39 @@
     </div>
   </section>
 
-  <!-- Content Section -->
   <section class="py-5">
     <div class="container">
       <div class="section-heading text-center mb-5">
         <h2 class="golden-header">Building Physical Wellness & Mental Resilience</h2>
       </div>
-
       <div class="row g-4">
         <div class="col-md-6">
           <div class="card h-100 p-5 text-center">
             <h4 class="golden-header mb-3">Yoga & Physical Fitness</h4>
-            <p class="lead">Surya Namaskar, Pranayama, Asanas and complete fitness routines aligned with Ministry of AYUSH standards. Making every child strong in body like our ancient warriors.</p>
+            <p class="lead">Surya Namaskar, Pranayama, Asanas and complete fitness routines aligned with Ministry of AYUSH standards.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card h-100 p-5 text-center">
             <h4 class="golden-header mb-3">Mental Strength & Mindfulness</h4>
-            <p class="lead">Meditation, stress management, emotional intelligence and inner peace training — helping children develop the calm mind and strong heart our elders always valued.</p>
+            <p class="lead">Meditation, stress management, emotional intelligence and inner peace training.</p>
           </div>
         </div>
       </div>
-
       <div class="text-center mt-5">
         <a href="#contact" class="main-button-red btn btn-lg px-5 py-3">Enroll Your Child Today</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact & Footer (same as above) -->
   <section class="contact-us" id="contact">
     <div class="container">
       <div class="row">
         <div class="col-lg-9 align-self-center">
           <form id="contact" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <h2>Partner With Us</h2>
-            <p style="color: #D4AF37;">Bring holistic wellness to government and aided schools across Odisha.</p>
+            <p style="color:#D4AF37;">Bring holistic wellness to government and aided schools across Odisha.</p>
             <div class="row">
               <div class="col-lg-4"><input name="name" type="text" placeholder="YOUR NAME..." required class="form-control mb-3"></div>
               <div class="col-lg-4"><input name="email" type="email" placeholder="YOUR EMAIL..." required class="form-control mb-3"></div>
